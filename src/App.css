@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+@import url('./css/style.css');
+
+* {
+  --outline: 1px solid red;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 15px;
+
+  padding: 15px;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar {
+  width: 12px; 
+  height: 12px; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.padded {
+  padding: 15px;
+}
+
+.radius-left {
+  border-radius: 15px 0 0 15px;
+}
+
+.radius-right {
+  border-radius: 0 15px 15px 0;
+}
+
+.radius-full {
+  border-radius: 15px;
+}
+
+.transparent {
+  background-color: transparent !important;
+}
+
+.title {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.circular {
+  border-radius: 50%;
+}
+
+.center-full {
+  justify-self: center;
+  align-self: center;
+}
+
+.center-x {
+  justify-self: center;
+}
+
+.center-y {
+  align-self: center;
+}
+
+.bottom {
+  align-self: flex-end;
+}
+
+.no-border {
+  border: none;
+}
+
+.scrollable-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.screen-overlay {
+  width: 100vw;
+  height: 100vh;
 }
